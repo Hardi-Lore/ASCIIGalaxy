@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style.css') }}"
+    rel="stylesheet" />
+    <title>New Art</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="row">
+            
+            <div class="link1"><a href="index">My Art</a></div>
+            <div class="link2"><a href="about">About</a> </div>
+        </div>
+
+        
+        
+        <div id="about">
+            <h2>New Art</h2>
+            <p> From this day forward this art wiil be known as: {{ file_name }}</p>
+            <div id="about-img"><img src="data:image/jpeg;base64,{{ img_data }}" alt=""></div>
+        </div>
+
+        <div id="contact">
+            <h2>Let's creat ASCII art for you</h2>
+            <form action="create_art">
+                <button type="submit">Create Art</button>
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <p>Created by <em><span> Hardique </span></em></p>
+    </footer>
+    
+</body>
+
+</html>

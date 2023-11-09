@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Art Galley</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="link1"><a href="index">My Art</a></div>
+            <div class="link2"><a href="about">About</a> </div>
+        </div>
+        <div id="about">
+            <h2>
+                Explore the Universe in ASCII Art!
+            </h2>
+            <div id="about-img"><img src= "{{ url_for('static', filename='img/lamping_houndstooth_check.jpg') }}" alt=""></div>
+
+            <p>
+                Join us on this cosmic journey and experience the magic of space through the eyes of characters and symbols. It's a captivating blend of technology and artistry that's as mesmerizing as the stars themselves.
+            </p>
+            <p>
+                Prepare to be inspired, and let the universe unfold before you in a unique and creative way. Dive into the world of ASCII block art with NASA's cosmic canvas. Start exploring the cosmos with a twist today!
+            </p>
+            <p>
+                Go to the bottom of the page to create your own ASCII art            
+            </p>
+            
+
+        </div>
+        <div class="row">
+            <div class="col-6 left"><img src= "{{ url_for('static', filename='img/spotting_erotica.jpg') }}" alt="image1"></div>
+
+            <div class="col-6 right"><img src="{{ url_for('static', filename='img/patterning_family_Bramidae.jpg') }}" alt="image2"></div>
+
+            <div class="col-6 left"><img src="{{ url_for('static', filename='img/wooding_Bos_banteng.jpg') }}" alt="image3"></div>
+            <div class="col-6 right"><img src="{{ url_for('static', filename='img/begging_Leptodactylidae.jpg') }}" alt="image4"></div>
+
+            <div class="col-6 right"><img src="{{ url_for('static', filename='img/bidding_contour.jpg') }}" alt="image5"></div>
+            <div class="col-6 left"><img src="{{ url_for('static', filename='img/carping_resignation.jpg') }}" alt="image6"></div>
+
+        
+
+        </div>
+        <div class="container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="{{ url_for('static', filename='img/nonscalding_parieto-occipital_sulcus.jpg') }}" alt="">
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="{{ url_for('static', filename='img/nonsetting_golden_fern.jpg') }}" alt="">
+                <div class="text">Caption two</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="{{ url_for('static', filename='img/slipping_Henry_Kenneth_Alfred_Russell.jpg') }}" alt="">
+                <div class="text">Caption three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div id="about">
+            <p>     
+                       
+                       
+            </p>
+        </div>
+
+
+        <div id="contact">
+            <h2>Let's creat ASCII art for you</h2>
+            <form action="create_art">
+                <button type="submit">Create Art</button>
+            </form>
+
+        </div>
+
+    </div>
+    <footer>
+        <p>Created by <em><span> Hardique </span></em></p>
+    </footer>
+    <script>
+        var slidIndex = 1;
+        showSlides(slidIndex);
+
+        function plusSlides(n) {
+            showSlides(slidIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slidIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n < 1)
+                slidIndex = slides.length;
+            if (n > slides.length)
+                slidIndex = 1;
+            for (i = 0; i < slides.length; i++)
+                slides[i].style.display = "none";
+            for (i = 0; i < dots.length; i++)
+                dots[i].className = dots[i].className.replace(" active", "");
+            slides[slidIndex - 1].style.display = "block";
+            dots[slidIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
