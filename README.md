@@ -14,7 +14,8 @@ ASCIIGalaxy is a unique web application that turns awe-inspiring NASA images of 
 - **Cosmic Creativity:** Convert stunning NASA-captured pictures into ASCII masterpieces.
 - **Dynamic Preview:** See the transformation in real-time with our interactive preview feature.
 - **Easy to Use:** Simple interface, making it accessible to both space enthusiasts and ASCII art novices.
-- **Customization:** Fine-tune your ASCII art with adjustable settings for character density and style.
+- Uses pyhton(flask), html, CSS, javaScript to deply add render the webpage
+
 
 ## Dependencies
 
