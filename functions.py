@@ -67,14 +67,15 @@ def get_check_image_url():
     """
     # Get an APOD image URL using the get_image_url function
     image_url = get_image_url()
+    return image_url
 
-    # Check if the image URL ends with '.jpg'
-    if ".jpg" in image_url:
-        # If it does, return the valid image URL
-        return image_url
-    else:
-        # If not, recursively call the function to get another image URL
-        return get_check_image_url()
+    ## Check if the image URL ends with '.jpg'
+    # if ".jpg" in image_url:
+        ## If it does, return the valid image URL
+        # return image_url
+    # else:
+        ## If not, recursively call the function to get another image URL
+        # return get_check_image_url()
 
 def file_check(file_path="myfile.txt", file_path_base="myfile.txt", count=-1):
     """Check if a file exists at the specified path and generate a unique filename if needed.
